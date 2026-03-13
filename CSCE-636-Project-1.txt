@@ -1,0 +1,21 @@
+Project 1. Due: 11:59pm (Central Time) on Monday 3/16/2026 in Canvas. (Please submit your trained DNNs and Jupyter notebook in Canvas.) 
+
+We provide a training set in the "Files" section in Canvas: 
+
+1) The file named CSCE-636-Project-1-Train-n_k_m_P
+
+2) The file named CSCE-636-Project-1-Train-mHeights
+
+Note that if you would like a larger training set, you can implement the LP-based algorithm described in the project file to create more samples. Having a larger dataset is usually helpful.
+
+Both files in the above training set contain a list saved using pickle.dump(), which you can open using pickle.load(). In the list of the file "CSCE-636-Project-1-Train-n_k_m_P", each sample is a list  [n,k,m,P], where n=9 is an integer, k is an integer in {4, 5, 6}, m is an integer in {2, 3, ...,, n-k}, P is a 2-dimensional numpy array of k rows and n-k columns. In the list of the file "CSCE-636-Project-1-Train-mHeights", each element is an m-height, which is a real number. For r=0,1,2..., the r-th number in the list of the "CSCE-636-Project-1-Train-mHeights" is the m-height of the r-th sample in the list of the "CSCE-636-Project-1-Train-n_k_m_P". (Note: the above dataset is posted on 2/17/2026. It has 96,524 samples.)
+
+The file "CSCE-636-Project-1-Train-n_k_m_P" above is also an example of a test set. It has the same format as the test set that will be used to test your model. MAKE SURE that your submitted code works with the test set, and outputs a list of corresponding predicted m-heights that has EXACTLY THE SAME FORMAT as the list in the "CSCE-636-Project-1-Train-mHeights". 
+
+===============================
+
+After the submission deadline of 3/16/2026 (for submitting your trained DNNs and Jupyter notebook), here is the next step:
+
+To ensure correct grading of your submitted model, a Sample Test Set will be posted in the "Files" section in Canvas before Thursday 3/19/2026. Please run your already-submitted model for this project (without ANY change to the model) on the posted Sample Test Set to get the list of corresponding predicted m-heights, and submit the list as a single file in Canvas. (The posted Sample Test Set is a part of the test set used to evaluate your models. Your submitted results --- namely, the m-heights predicted by your model for this project -- will be compared to our testing results on your model for verification.) 
+
+What to submit: Save the list of m-heights (which are your model's predicted m-heights for the Sample Test Set) as a file using pickle.dump(). Submit the above file in Canvas by Friday 3/20/2026. (Note: without this file, the project will not be graded.) 
